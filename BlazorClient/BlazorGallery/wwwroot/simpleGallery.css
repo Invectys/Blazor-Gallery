@@ -1,0 +1,11 @@
+﻿
+
+.def_gallery {
+    columns: 4;
+    column-gap: 0px;
+}
+
+.def_image {
+    width: 100%;
+    height: auto;
+}

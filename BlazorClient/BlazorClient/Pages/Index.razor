@@ -1,0 +1,33 @@
+﻿@page "/"
+@inject HttpClient httpClient
+
+
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+<SimpleGallery GalleryMaker="_galleryMaker"></SimpleGallery>
+
+
+@code
+{
+
+    private GalleryMaker _galleryMaker;
+    private string _url;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        var testImages = new TestImages(httpClient);
+        await testImages.LoadImages();
+
+        _galleryMaker = new GalleryMaker();
+        _galleryMaker.SetImages(testImages.Loaded);
+
+
+
+    }
+
+
+
+}

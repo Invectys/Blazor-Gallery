@@ -1,0 +1,30 @@
+﻿
+@if (GalleryMaker != null)
+{
+    <div class="def_gallery" style="columns: @(GalleryMaker.ColumnAmount);">
+        @foreach (var image in GalleryMaker.Images)
+        {
+            var base64 = Convert.ToBase64String(image);
+            string url = String.Format("data:image/jpg;base64, {0}", base64);
+
+            if (ChildContent == null)
+            {
+                <img src="@url" class="def_image" />
+            }
+            else
+            {
+                @ChildContent(url)
+            }
+        }
+    </div>
+}
+
+
+@code {
+
+
+    [Parameter] public GalleryMaker GalleryMaker { get; set; }
+    [Parameter] public RenderFragment<string> ChildContent { get; set; }
+
+}
+

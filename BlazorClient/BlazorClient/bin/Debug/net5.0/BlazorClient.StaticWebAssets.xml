@@ -1,0 +1,6 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="D:\GitHub\Blazor-Gallery\BlazorClient\BlazorClient\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="D:\GitHub\Blazor-Gallery\BlazorClient\BlazorClient\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/BlazorGallery" Path="D:\GitHub\Blazor-Gallery\BlazorClient\BlazorGallery\obj\Debug\net5.0\scopedcss\projectbundle\" />
+  <ContentRoot BasePath="_content/BlazorGallery" Path="D:\GitHub\Blazor-Gallery\BlazorClient\BlazorGallery\wwwroot\" />
+</StaticWebAssets>
